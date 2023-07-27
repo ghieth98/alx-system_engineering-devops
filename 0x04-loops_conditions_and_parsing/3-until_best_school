@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This is script "Best School" 10 tiems
+msg="Best School"
+count=0
+
+until [ $count -eq 10 ]
+do
+echo "$msg"
+count=$((count+1))
+done
