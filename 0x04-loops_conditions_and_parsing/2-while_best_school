@@ -3,7 +3,7 @@
 msg="Best School"
 count=0
 
-while [ $count -lt 10]
+while [ $count -lt 10 ]
 do
 echo "$msg"
 count=$((count+1))
