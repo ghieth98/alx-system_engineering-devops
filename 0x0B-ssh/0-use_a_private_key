@@ -3,4 +3,4 @@
 private_key="~/.ssh/school"
 username="ubuntu"
 server_ip="100.26.177.38"
-ssh i "$private_key" "$username@server_ip"
+ssh i "$private_key" "$username@$server_ip"
