@@ -68,3 +68,4 @@ configure_haproxy
 enable_haproxy_init
 start_haproxy
 verify_haproxy_status
+

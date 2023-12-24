@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+sudo adduser ghieth
+usermod -aG sudo ghieth
+
+cd /home/ghieth || exit
+sudo mkdir ".ssh"
+touch authorized_keys
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCmt/3Ib2fJrQG+O8bwHSjsPkEurH08lDMY6t1+agdr+Wf48PQy10YxEH/NFz7nT0fVIwMlTyvfdjNGBDLeczRgyZvgCMvNwN0sFXQh4FsTgI4EGXkSmmIe+infH4ZhsoWoAHjtGMgF1eVlOu+H4FBsM7XfsKiQyitQPBtbRaZZ54s+6cTJg5uOqW1Rb6O1g3IQutk3qYSs33GQvyE60ZijrS4bZdAntPUrgo7gZwuR7UycttV2vz6IHhwj0S64HuQvhlkbPQIEqdVnWoIVwFefRmncS0GuB8hISOjB8J0icLLVp8A7STMDoyy1ATFhMroKgK6u8SUTnGFB/gc272gq+MJaGAdm9UZMVm+I+dTtMxjLWNwyuyk7FcRleYdTLICyq+uu+7fwlIR1j8wKPXaNpFOpXohqp3Y+wMS15H5xjFNNMbgHuBCXDjAPqLCbQ1aXnR8dIY9Nnxi19gziAi5NYs2LxyvYaWaX4Dbf2GUQXA6PuQrqo/yjPbHdqv1NRlE= ghieth@hossam" > /home/ghieth/.ssh/authorized_keys
