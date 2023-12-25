@@ -45,14 +45,20 @@
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-    frontend FT43-tech-frontend-https
-        bind *:81
+
+    frontend FT43-tech-http_front
+         bind *:81
+        http-request redirect scheme https code 301 if !{ ssl_fc }
+        http-request set-header X_Forwarded-Proto http
+        default_backend FT43-tech-backend
+
+    frontend FT43-tech-https_front
         bind *:443 ssl crt /etc/haproxy/certs/www.ghieth.tech.pem
-        redirect scheme https if !{ ssl_fc }
         http-request set-header X-Forwarded-Proto https
         default_backend FT43-tech-backend
 
+
     backend FT43-tech-backend
         balance roundrobin
-        server 195416-web-01 18.215.160.252:81 check
-        server 195416-web-02 54.237.38.206:81 check
+        server 195416-web-01 18.215.160.252:80 check
+        server 195416-web-02 54.237.38.206:80 check
